@@ -117,16 +117,15 @@ Define a `before_request` function and use the `app.before_request` decorator to
 In your HTML template, if a user is logged in, in a paragraph tag, display a welcome message otherwise display a default message as shown in the table below.
 
 |**msgid**       | **English**                           | **French** |
-|:------------- -|:-------------------------------------:|-----------:|
+|:---------------|:-------------------------------------:|-----------:|
 |`logged_in_as`  | `"You are logged in as %(username)s."`| `"Vous êtes connecté en tant que %(username)s."`|
-|`not_logged_in	`| `"You are not logged in."`            | `"Vous n'êtes pas connecté."
-`|
+|`not_logged_in	`| `"You are not logged in."`            | `"Vous n'êtes pas connecté."`|
 
 **Visiting `http://127.0.0.1:5000/` in your browser should display this:**
 
 ![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/2c5b2c8190f88c6b4668.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230228%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230228T062020Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e6de8bc339da5c75bdde5e0d89109e579a885d5406793ab90dcf3fcedef22aa1)
 
-**++Visiting `http://127.0.0.1:5000/?login_as=2` in your browser should display this:++**
+<u> **Visiting `http://127.0.0.1:5000/?login_as=2` in your browser should display this:** </u>
 
 ![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/277f24308c856a09908c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230228%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230228T062020Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=99207542eb89cd7bd9c62e6ac9629c3b6977d471cd27a50efa97aef9481d116b)
 
@@ -135,10 +134,11 @@ Change your `get_locale` function to use a user’s preferred local if it is sup
 
 The order of priority should be
 
-Locale from URL parameters
-Locale from user settings
-Locale from request header
-Default locale
+1. Locale from URL parameters
+2. Locale from user settings
+3. Locale from request header
+4. Default locale
+
 Test by logging in as different users
 
 ![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/9941b480b0b9d87dc5de.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230228%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230228T062020Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ecfbcaec4c650ed36278de4eb056420df3a9ba7f43ec8e71cd1206afd0994db3)
